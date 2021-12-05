@@ -1,2 +1,2 @@
-# ml_toxic_classifier
+# ml_toxic_classiffier
 Определение токсичности комментариев
