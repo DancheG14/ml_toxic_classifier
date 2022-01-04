@@ -7,7 +7,7 @@ class Item(BaseModel):
 
 app = FastAPI()
 classifier = pipeline("sentiment-analysis",   
-                      "SkolkovoInstitute/russian_toxicity_classifier")
+                      "distilbert-base-uncased-finetuned-sst-2-english")
 
 @app.get("/")
 def root():
