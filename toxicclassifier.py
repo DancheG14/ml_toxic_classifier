@@ -9,10 +9,10 @@ app = FastAPI()
 classifier = pipeline("sentiment-analysis",   
                       "distilbert-base-uncased-finetuned-sst-2-english")
 
-@app.get("/")
+@app.post("/")
 def root():
     return {"message": "Hello World"}
 
-@app.get("/predict/")
+@app.post("/predict/")
 def predict(item: Item):
     return classifier(item.text )[0]
