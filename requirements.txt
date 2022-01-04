@@ -1,4 +1,3 @@
 fastapi
 uvicorn
-transformers
-tensorflow-cpu
+transformers[tf-cpu]
