@@ -4,3 +4,4 @@ torchvision==0.9.1+cpu
 fastapi
 uvicorn
 transformers
+pydantic
