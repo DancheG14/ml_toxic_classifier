@@ -8,7 +8,7 @@ class Item(BaseModel):
 
 
 app = FastAPI()
-classifier = pipeline("sentiment-analysis", 
+classifier = pipeline("sentiment-analysis",
                       "distilbert-base-uncased-finetuned-sst-2-english")
 
 
