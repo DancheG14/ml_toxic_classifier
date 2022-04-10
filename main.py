@@ -8,7 +8,8 @@ class Item(BaseModel):
 
 
 app = FastAPI()
-classifier = pipeline("sentiment-analysis", "distilbert-base-uncased-finetuned-sst-2-english")
+classifier = pipeline("sentiment-analysis", 
+                      "distilbert-base-uncased-finetuned-sst-2-english")
 
 
 @app.get("/")
@@ -19,4 +20,3 @@ def root():
 @app.post("/predict/")
 def predict(item: Item):
     return classifier(item.text)[0]
-
