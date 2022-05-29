@@ -8,9 +8,7 @@ class Item(BaseModel):
 
 
 app = FastAPI()
-classifier = pipeline(
-    "text-classification", model="distilbert-base-uncased-finetuned-sst-2-english"
-)
+classifier = pipeline("text-classification", model="lordtt13/emo-mobilebert")
 
 
 @app.get("/")
