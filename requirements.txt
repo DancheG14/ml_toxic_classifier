@@ -1,4 +1,4 @@
-transformers[tf-cpu]
+transformers[torch]
 fastapi
 uvicorn
 pydantic
