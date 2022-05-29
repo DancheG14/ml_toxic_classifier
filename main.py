@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from transformers import pipeline("sentiment-analysis", "distilbert-base-uncased-finetuned-sst-2-english") as pipeline
+from transformers import pipeline
 from pydantic import BaseModel
 
 
@@ -8,7 +8,7 @@ class Item(BaseModel):
 
 
 app = FastAPI()
-classifier = pipeline
+classifier = pipeline("text-classification")
 
 
 @app.get("/")
